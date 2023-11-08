@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); 
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{ 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block; 
+    margin-right: 20px;
+}
+a{
+    text-decoration: none; 
+    color: #1d00f7;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px; 
+    margin: auto; 
+    padding-left: 5px; 
+    padding-right: 5px;
+}
+
+
+body {
+    background-color: #eeeeee;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.container-fluid {
+    margin-top: 70px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.40rem;
+}
+
+.img-sm {
+    width: 80px;
+    height: 80px;
+}
+
+.itemside .info {
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.table-shopping-cart .price-wrap {
+    line-height: 1.2;
+}
+
+.table-shopping-cart .price {
+    font-weight: bold;
+    margin-right: -10px;
+    display: block;
+}
+
+.text-muted {
+    color: #969696 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0px;
+}
+
+.itemside {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.dlist-align {
+    display: flex;
+}
+
+[class*="dlist-"] {
+    margin-bottom: 5px;
+}
+
+.coupon {
+    border-radius: 1px;
+}
+
+.price {
+    font-weight: 600;
+    color: #212529;
+}
+
+.btn.btn-out {
+    outline: 1px solid #fff;
+    outline-offset: -5px;
+}
+
+.btn-main {
+    border-radius: 2px;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 10px 19px;
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+}
+
+.btn-light {
+    color: #ffffff;
+    background-color: #F44336;
+    border-color: #f8f9fa;
+    font-size: 12px;
+}
+
+.btn-light:hover {
+    color: #ffffff;
+    background-color: #F44336;
+    border-color: #F44336;
+}
+
+.btn-apply {
+    font-size: 11px;
+}
+
+/*------------ footer ----------- */
+
+.footer{
+    background: rgb(67, 176, 0); 
+    color: #000; 
+    font-size: 14px; 
+    padding: 60px 0 20px;
+}
+.footer p{ 
+    color: #000;
+}
+.footer h3{
+    color: #fff; 
+    margin-bottom: 20px;
+}
+    
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{ 
+    min-width: 250px; 
+    margin-bottom: 20px;
+}    
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{ 
+    width: 180px; 
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}            
+ul{
+    list-style-type: none;
+}
+.app-logo{ 
+    margin-top: 20px;
+}
+.app-logo img{ 
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #fff;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+}
+
+/*------------ media query for menu -----------*/
+@media only screen and (max-width: 800px) {
+
+    nav ul{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100%;
+            margin: hidden;
+            overflow: hidden;
+            transition: max-height 0.5s;
+    }    
+    nav ul li{
+        display: block;    
+        margin-right: 50px;   
+        margin-top: 10px;    
+        margin-bottom: 10px;   
+    }    
+    nav ul li a{ 
+        color: #fff;    
+    }
+        
+    .menu-icon{ 
+        display: block;    
+        cursor: pointer;
+    } 
+    }          
+           
+    
+    
+    
+    /*---media query for less than 600 screen size---*/ 
+    @media only screen and (max-width: 600px) {
+      .form{
+        text-align: center;
+        }
+        .row{
+            text-align: center;
+            }
+        .col-2, .col-3, .col-4{ 
+            flex-basis: 100%;
+            }
+        .single-product .row{ 
+            text-align: left;
+            }
+        .single-product .col-2{ 
+            padding: 20px 0;
+            }
+        .single-product h1{ 
+            line-height: 26px; 
+            font-size: 32px;
+            }
+        }
